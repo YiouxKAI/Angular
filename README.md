@@ -17,4 +17,3 @@ tsc --version
  */
 tsc 02DataType.ts & node 02DataType.js   
 ```
-# Angular
