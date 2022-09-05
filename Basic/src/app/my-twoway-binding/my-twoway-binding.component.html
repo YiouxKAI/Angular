@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 class="alert alert-danger">雙向綁定</h1>
+    <label>屬性綁定：</label>
+    <input type="text" [value]="val">
+    <label>事件綁定：</label>
+    <input type="text" (keyup)="onKeyup(txtValue.value)" #txtValue> <!-- #標籤 類似匿名/別名 的方式-->
+    {{val2}}
+
+    
+    <!-- Banana in box
+    ngModel是固定詞，看到這個詞就表示是雙向綁定
+    -->
+    <label>雙向綁定：</label>
+    <input type="text" [(ngModel)]="val3">
+    {{val3}} 
+
+
+</div>
