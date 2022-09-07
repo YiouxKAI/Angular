@@ -11,6 +11,8 @@ import { MyEventBindingComponent } from './my-event-binding/my-event-binding.com
 import { MyTwowayBindingComponent } from './my-twoway-binding/my-twoway-binding.component';
 import { MyClassStyleBindingComponent } from './my-class-style-binding/my-class-style-binding.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { SqrtPipe } from './pipe/app.sqrt';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MyEventBindingComponent,
     MyTwowayBindingComponent,
     MyClassStyleBindingComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    PipeComponent,
+    SqrtPipe
   ],
   imports: [
     BrowserModule,
