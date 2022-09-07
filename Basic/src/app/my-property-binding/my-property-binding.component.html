@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 class="alert alert-warning">屬性綁定</h1>
+    <a href=""></a>
+    <img src="http://i1.wp.com/inews.gtimg.com/newsapp_bt/0/3051129012/640" />
+    <img [src]="imgUrl" />
+    <img src="{{imgUrl}}" />
+    <a [href]="myLink">Google!!</a>
+
+    <img *ngFor="let img of imgUrls" [src]="img"  />
+</div>

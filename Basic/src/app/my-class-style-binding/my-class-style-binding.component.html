@@ -1,0 +1,23 @@
+<div class="container">
+    <h1 class="alert alert-primary">Class & Style Binding!</h1>
+
+    <button [class]="classStyle">Button</button>
+    <br>
+
+    <button [class]="isDanger? classStyle:'btn btn-danger'" (click)="toggle()">Button</button>
+    <br>
+    
+    <button class="btn btn-primary" [class.btn-danger]="isDanger" (click)="toggle()">Button</button>
+
+    <hr>
+
+    <div [style.color]="textColor" [style.backgroundColor]="bgColor">
+        Style Binding
+    </div>
+
+    <div [style.color]="textColor" [style.backgroundColor]="isRed? 'yellow':bgColor">
+        Style Binding
+    </div>
+
+</div>
+

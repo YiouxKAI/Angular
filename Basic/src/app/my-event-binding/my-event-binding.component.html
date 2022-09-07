@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="alert  alert-info">事件綁定</h1>
+    <p>{{Mystring}}</p>
+    <button class="btn btn-warning" onclick="alert('黑~被點了!')">請點我(一般寫法)</button>
+
+    <button class="btn btn-warning" (click)="clickMe()">請點我(事件綁定)</button>
+
+    <button class="btn btn-warning" (click)="clickMe2($event)">請點我(抓事件)</button>
+
+    <div>
+        <label>myKeyup(console.log)</label>
+        <input type="text" (keyup)="myKeyup($event)" />
+    </div>
+    <div>
+        <label>myKeyup(console.log)key到F時會show值</label>
+        <input type="text" (keyup.F)="myKeyup($event)" />
+    </div>
+    <div>
+        <label>myInput隨key隨顯示</label>
+        <input type="text" (keyup)="myInput($event)" />
+    </div>
+
+    
+
+
+
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+   <h1 class="alert alert-danger">{{title}}</h1> 
+    {{nightMarkets}}
+ 
+    <ul>
+        <!-- ng冠在前面的是Angular的專屬用法，不是TypeScript的語法 -->
+        <li *ngFor="let nm of nightMarkets">{{nm}}</li>  
+    </ul> 
+    <hr>
+    {{nightMarketSet}}
+    <ul>
+        <li *ngFor="let nmItem of nightMarketSet">{{nmItem.id}}-{{nmItem.name}}</li>
+    </ul>
+
+    <p class="text-danger" *ngIf="nightMarketSet.length==0">目前沒有任何資料</p>
+</div>

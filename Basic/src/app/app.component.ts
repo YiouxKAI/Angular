@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ALOHA Angular';
   data='Welcome My Homepage';
+
+  onChange(){
+    console.log("Changed!!");
+  }
 }
