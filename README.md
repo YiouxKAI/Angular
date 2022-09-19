@@ -23,7 +23,10 @@ tsc 02DataType.ts & node 02DataType.js
 >建立Commpoent元件
 ```command
 ng g c MyInterpolation
+
+ng g c list/list-detail //在list的component底下加一個list-detail
 ```
+
 
 #專案說明
 >MySMS

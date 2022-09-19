@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let list of nightMarkets">
+
+        <!-- <a routerLink="{{list}}">{{list}}</a> -->
+
+        <a [routerLink]="[list]">{{list}}</a>
+    </li>
+</ul>
