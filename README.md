@@ -27,6 +27,12 @@ ng g c MyInterpolation
 ng g c list/list-detail //在list的component底下加一個list-detail
 ```
 
+>git command
+```
+git add .
+git commit -m "command"
+git push -u origin main
+```
 
 #專案說明
 >MySMS
