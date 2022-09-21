@@ -1,5 +1,6 @@
 # Angular
 職訓局Angular課程
+網站在架設時，先從Routing開始設定
 
 # TypeScript
 >安裝TypeScript套件

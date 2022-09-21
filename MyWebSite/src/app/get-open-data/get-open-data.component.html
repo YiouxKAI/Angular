@@ -1,0 +1,49 @@
+<div class="row">
+    <div *ngFor="let item of items" class="card border-secondary col-lg-4 col-md-6 mb-1 p-3">
+        
+        <img [src]="[item.Photo]">
+        <div class="card-body">
+            <h2 ><strong>{{item.Name}}</strong></h2>
+            <h5>{{item.city}}{{item.Town}}</h5>
+            <h5>{{item.Tel}}</h5>
+            <h5>{{item.Address}}</h5>
+        </div>        
+        <div class="card-footer d-grid">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="{{item.ID}}" (click)="showDetail($event)">
+                詳細資料
+              </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div *ngFor="let item of items">
+                <div class="row" *ngIf="item.ID==itemID">
+                    <div class="col-6">
+                        <img src="{{item.Photo}}" class="img-thumbnail">
+                    </div>
+                    <div class="col-6">
+                        <h2><strong>{{item.Name}}</strong></h2>
+                        <h5>{{item.City}}{{item.Town}}　<a href="https://www.google.com.tw/maps/search/{{item.Name}}/@{{item.Latitude}},{{item.Longitude}},17z" target="_blank"><i class="bi bi-map-fill"></i></a></h5>
+                        <h5>{{item.Tel}}</h5>
+                        <h5>{{item.Address}}</h5>
+                        <p>{{item.Introduction}}</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
