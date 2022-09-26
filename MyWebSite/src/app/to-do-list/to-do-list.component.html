@@ -1,1 +1,27 @@
-<p>to-do-list works!</p>
+<button class="btn btn-primary mt-5">Create</button>
+<table class="table mt-5 table-striped" style="font-size:1.3rem;">
+    <thead>
+        <tr >
+            <th>ID</th>
+            <th>Subject</th>
+            <th>Description</th>
+            <th>Done</th>
+            <th>Manage</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of items">
+            <td>{{item.Id}}</td>
+            <td>{{item.Subject}}</td>
+            <td>{{item.Description}}</td>
+            <td *ngIf="item.Done==true">
+                <i class="bi bi-check2-circle text-success"></i>
+            </td>
+            <td *ngIf="item.Done==false">
+                <i class="bi bi-x-circle text-danger"></i>
+            </td>
+            <td><button class="btn btn-success btn-sm"><i class="bi bi-pencil-fill"></i> Edit</button> | <button class="btn btn-danger btn-sm" (click)="onDel(item.Id)"><i class="bi bi-trash3-fill "></i> Delete</button></td>
+        </tr>
+    </tbody>
+</table>
