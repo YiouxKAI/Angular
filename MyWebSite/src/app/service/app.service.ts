@@ -46,8 +46,8 @@ export class AppService {
  
    }
 
-   updateData(id:any,data:any){
-    return  this.http.patch(`${this.url}/${id}`,data)
+   updateData(data:any){
+    return  this.http.put(`${this.url}/${data.Id}`,data)
     .pipe(catchError(this.handleError))
  
    }
